@@ -1,0 +1,7 @@
+{
+  "host": "http://localhost:8889",
+  "uri": {
+    "getDemo": "/v1/getDemo",
+    "postSecond": "/postSecond"
+  }
+}
