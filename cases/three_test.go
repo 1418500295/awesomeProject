@@ -19,8 +19,7 @@ func Test_login(t *testing.T) {
 	var testFile  = utils.GetUrl(projectPath,"url.json","getDemo")
 	mapData := utils.SendGet(testFile,data)
 	assert.Equal(t,"200",mapData["status"])
-	fmt.Println(1)
-	fmt.Println(os.Getwd())
+
 
 }
 func Test_post(t *testing.T) {
@@ -43,7 +42,7 @@ func Test_postParam(t *testing.T) {
 	data["sex"] = "male"
 	resp, _ := HttpRequest.Post("http://localhost:8889/postSecond",data)
 	body, _ := resp.Body()
-	fmt.Println(string(body))
+	assert.Contains(t,string(body),"\"msg\":\"成功\"")
 
 }
 

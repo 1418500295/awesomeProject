@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fe796f7a-f513-40b6-a1c1-40e4a22a0afe" name="Default Changelist" comment="" />
+    <list default="true" id="fe796f7a-f513-40b6-a1c1-40e4a22a0afe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fifteen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fourteen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sixteen.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/one.go" beforeDir="false" afterPath="$PROJECT_DIR$/cases/one.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/three_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/cases/three_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/two_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/cases/two_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fortheen.go" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +28,11 @@
     </option>
   </component>
   <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aF2zqRlARGd5E3UfB0mxbBRh50" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -36,7 +51,16 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="Go Test.Test_withHeader in awesomeProject/cases">
+  <component name="RunManager" selected="Go Build.go build awesomeProject/cases">
+    <configuration name="go build awesomeProject (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/fourteen.go" />
+      <package value="awesomeProject" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build awesomeProject/cases" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -46,29 +70,16 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_json in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build sixteen.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
-      <working_directory value="$PROJECT_DIR$/cases" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="awesomeProject/cases" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/sixteen.go" />
+      <package value="awesomeProject" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_json$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_jsonPost in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="awesomeProject" />
-      <working_directory value="$PROJECT_DIR$/cases" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="awesomeProject/cases" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_jsonPost$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test_login in awesomeProject/cases (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_login in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/cases" />
       <framework value="gotest" />
@@ -79,7 +90,7 @@
       <pattern value="^Test_login$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_withHeader in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_postParam in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/cases" />
       <framework value="gotest" />
@@ -87,16 +98,16 @@
       <package value="awesomeProject/cases" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^Test_withHeader$" />
+      <pattern value="^Test_postParam$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.Test_withHeader in awesomeProject/cases" />
-        <item itemvalue="Go Test.Test_jsonPost in awesomeProject/cases" />
-        <item itemvalue="Go Test.Test_login in awesomeProject/cases (2)" />
-        <item itemvalue="Go Test.Test_json in awesomeProject/cases" />
         <item itemvalue="Go Build.go build awesomeProject/cases" />
+        <item itemvalue="Go Test.Test_postParam in awesomeProject/cases" />
+        <item itemvalue="Go Test.Test_login in awesomeProject/cases" />
+        <item itemvalue="Go Build.go build sixteen.go" />
+        <item itemvalue="Go Build.go build awesomeProject (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -120,10 +131,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588996298211" />
-    <state x="477" y="46" key="#go_build_awesomeProject" timestamp="1589001362681">
+    <state x="477" y="46" key="#go_build_awesomeProject" timestamp="1589420837310">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="46" key="#go_build_awesomeProject/0.0.1536.824@0.0.1536.824" timestamp="1589001362681" />
+    <state x="477" y="46" key="#go_build_awesomeProject/0.0.1536.824@0.0.1536.824" timestamp="1589420837310" />
     <state x="477" y="46" key="#go_build_awesomeProject/cases" timestamp="1588554811758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -148,10 +159,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="46" key="#go_build_awesomeProject/utils/0.0.1536.824@0.0.1536.824" timestamp="1588594136610" />
-    <state x="477" y="46" key="#go_build_awesomeProject_(1)" timestamp="1586400597086">
+    <state x="477" y="46" key="#go_build_awesomeProject_(1)" timestamp="1589425195040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="46" key="#go_build_awesomeProject_(1)/0.0.1536.824@0.0.1536.824" timestamp="1586400597086" />
+    <state x="477" y="46" key="#go_build_awesomeProject_(1)/0.0.1536.824@0.0.1536.824" timestamp="1589425195040" />
     <state x="477" y="46" key="#go_build_awesomeProject_(2)" timestamp="1586403745029">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -168,22 +179,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588557345981" />
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1589341573510">
+    <state width="1493" height="304" key="GridCell.Tab.0.bottom" timestamp="1589440913820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589341573510" />
-    <state width="1493" height="211" key="GridCell.Tab.0.center" timestamp="1589341573509">
+    <state width="1493" height="304" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
+    <state width="1493" height="304" key="GridCell.Tab.0.center" timestamp="1589440913820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589341573509" />
-    <state width="1493" height="211" key="GridCell.Tab.0.left" timestamp="1589341573509">
+    <state width="1493" height="304" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
+    <state width="1493" height="304" key="GridCell.Tab.0.left" timestamp="1589440913820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589341573509" />
-    <state width="1493" height="211" key="GridCell.Tab.0.right" timestamp="1589341573509">
+    <state width="1493" height="304" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
+    <state width="1493" height="304" key="GridCell.Tab.0.right" timestamp="1589440913820">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589341573509" />
+    <state width="1493" height="304" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1589191224119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
