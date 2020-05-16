@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe796f7a-f513-40b6-a1c1-40e4a22a0afe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fifteen.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fourteen.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sixteen.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/seventeen.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cases/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cases/a.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cases/one.go" beforeDir="false" afterPath="$PROJECT_DIR$/cases/one.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases/three_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/cases/three_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cases/two_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/cases/two_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fortheen.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/readFile.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/readFile.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +31,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1aF2zqRlARGd5E3UfB0mxbBRh50" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -49,18 +51,9 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
-  <component name="RunManager" selected="Go Build.go build awesomeProject/cases">
-    <configuration name="go build awesomeProject (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="awesomeProject" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/fourteen.go" />
-      <package value="awesomeProject" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Go Test.Test_withHeader in awesomeProject/cases">
     <configuration name="go build awesomeProject/cases" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -70,16 +63,7 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build sixteen.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="awesomeProject" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/sixteen.go" />
-      <package value="awesomeProject" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test_login in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_login in awesomeProject/cases (2)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/cases" />
       <framework value="gotest" />
@@ -90,7 +74,7 @@
       <pattern value="^Test_login$" />
       <method v="2" />
     </configuration>
-    <configuration name="Test_postParam in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_postParam in awesomeProject/cases (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/cases" />
       <framework value="gotest" />
@@ -101,18 +85,42 @@
       <pattern value="^Test_postParam$" />
       <method v="2" />
     </configuration>
+    <configuration name="Test_withHeader in awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/cases" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="awesomeProject/cases" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_withHeader$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test awesomeProject/cases" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/cases" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="awesomeProject/cases" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.Test_withHeader in awesomeProject/cases" />
+        <item itemvalue="Go Test.Test_postParam in awesomeProject/cases (1)" />
+        <item itemvalue="Go Test.Test_login in awesomeProject/cases (2)" />
         <item itemvalue="Go Build.go build awesomeProject/cases" />
-        <item itemvalue="Go Test.Test_postParam in awesomeProject/cases" />
-        <item itemvalue="Go Test.Test_login in awesomeProject/cases" />
-        <item itemvalue="Go Build.go build sixteen.go" />
-        <item itemvalue="Go Build.go build awesomeProject (1)" />
+        <item itemvalue="Go Test.go test awesomeProject/cases" />
       </list>
     </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Go_Modules_(vgo)" timestamp="1588318443958">
@@ -175,26 +183,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="477" y="47" key="#go_build_readFile.go/0.0.1536.824@0.0.1536.824" timestamp="1588650966631" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588557345981">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589597323265">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588557345981" />
-    <state width="1493" height="304" key="GridCell.Tab.0.bottom" timestamp="1589440913820">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589597323265" />
+    <state width="1493" height="413" key="GridCell.Tab.0.bottom" timestamp="1589597207732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="304" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
-    <state width="1493" height="304" key="GridCell.Tab.0.center" timestamp="1589440913820">
+    <state width="1493" height="413" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589597207732" />
+    <state width="1493" height="413" key="GridCell.Tab.0.center" timestamp="1589597207732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="304" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
-    <state width="1493" height="304" key="GridCell.Tab.0.left" timestamp="1589440913820">
+    <state width="1493" height="413" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589597207732" />
+    <state width="1493" height="413" key="GridCell.Tab.0.left" timestamp="1589597207732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="304" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
-    <state width="1493" height="304" key="GridCell.Tab.0.right" timestamp="1589440913820">
+    <state width="1493" height="413" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589597207732" />
+    <state width="1493" height="413" key="GridCell.Tab.0.right" timestamp="1589597207732">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="304" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589440913820" />
+    <state width="1493" height="413" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589597207732" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1589191224119">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -211,10 +219,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589191224119" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1589341481398">
+    <state x="270" y="0" key="SettingsEditor" timestamp="1589596255414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589341481398" />
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589596255414" />
     <state x="511" y="31" key="refactoring.ChangeSignatureDialog" timestamp="1589186577560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -223,6 +231,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589164592146" />
+    <state x="491" y="324" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589531495927">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="324" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1536.824@0.0.1536.824" timestamp="1589531495927" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/awesomeProject$Test_login_in_awesomeProject_cases__2_.out" NAME="Test_login in awesomeProject/cases (2) Coverage Results" MODIFIED="1589280162578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

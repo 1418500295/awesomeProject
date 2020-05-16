@@ -16,6 +16,7 @@ func FileMain(projectPath string,fileName string, index int) map[string]interfac
 
 	filePath := projectPath + "/testdata/" +fileName
 	result,err := os.Open(filePath)
+
 	if err != nil{
 		fmt.Println(err)
 	}
