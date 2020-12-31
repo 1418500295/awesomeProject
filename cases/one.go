@@ -9,7 +9,7 @@ import (
 )
 
 var (
-
+	//创建计数器
 	wg = sync.WaitGroup{}
 	num =  500
 	usedTime = 0
@@ -29,11 +29,13 @@ func main(){
 
 func runTimes(num int)  {
 	start_time = int(time.Now().UnixNano() / 1e6)
+	//设置计数器
 	wg.Add(num)
 	for i := 0;i <num; i++{
 		go send()
 	}
 	end_time = int(time.Now().UnixNano()/1e6)
+	//主协程等待子协程执行完毕
 	wg.Wait()
 
 	//time.Sleep(time.Second*3)
@@ -59,6 +61,7 @@ func httpSend()  {
 }
 
 func send()  {
+	//第一次调用，计数器减一
 	defer wg.Done()
 	req := HttpRequest.NewRequest()
 	data := make(map[string]string)
