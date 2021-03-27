@@ -1,9 +1,13 @@
 package main
 
 import (
+	"crypto/md5"
+	"encoding/hex"
 	"fmt"
 	"github.com/kirinlabs/HttpRequest"
 	"runtime"
+	"sort"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -21,15 +25,42 @@ type Request struct {
 	data map[string]interface{}
 }
 
+func Md5ToString(content string)  string{
+	h:= md5.New()
+	h.Write([]byte(content))
+	return hex.EncodeToString(h.Sum(nil))
+
+}
+
+func SortData(data map[string]interface{}) string {
+	var keys []string
+	for k := range data {
+		keys = append(keys, k)
+
+	}
+	sort.Strings(keys)
+	sortStr := ""
+	for _,i := range keys {
+		sortStr += i+"="+fmt.Sprintf("%v",data[i])+"&"
+
+	}
+	return strings.TrimRight(sortStr,"&")
+}
+
+func SetTs() string {
+	return strconv.FormatInt(time.Now().Unix()*1000,10)
+}
+
+
 func main() {
-	start_time := (time.Now().UnixNano())
+	start_time := time.Now().UnixNano()
 	fmt.Printf("开始时间：%v \n",start_time)
 	do(num)
 	end_time := time.Now().UnixNano()
 	fmt.Printf("结束时间：%v \n", end_time)
 	fmt.Println("成功的数量：", ok_num)
 	fmt.Printf("失败的数量：%v \n", num-ok_num)
-	fmt.Printf("总耗时：%v 秒 \n", (end_time - start_time)/1e9)
+	fmt.Printf("总耗时：%.2f 秒 \n", float64((end_time - start_time)/1e9))
 	sum := 0
 	for _,i := range time_list {
 		sum = sum + i
@@ -56,18 +87,26 @@ func httpSend() string {
 	//计数器减一
 	defer wg.Done()
 	var request Request
-	request.url = "http:///api/v1//"
-	request.data = make(map[string]interface{})
-	request.data["TypeId"] = 
-	request.data["AgentId"] = 
+	request.url = "http://web.1v1xqt.com:27777/api/v1/RewardRank"
+	data := make(map[string]interface{})
+	//request.data["TypeId"] = 89
+	//request.data["AgentId"] = 14926056
+	params := make(map[string]interface{})
+	params["UserId"] = 677779701
+	params["ts"] = SetTs()
+	params["Key"] = Md5ToString("w1234567")
+	sign := strings.ToUpper(Md5ToString(SortData(params)))
+	data["UserId"] = 677779701
+	data["ts"] = SetTs()
+	data["sign"] = sign
 	sTime := time.Now().UnixNano()/1e6
-	resp, _ := HttpRequest.Get(request.url, request.data)
+	resp, _ := HttpRequest.Get(request.url, data)
 	body, _ := resp.Body()
+	fmt.Println(string(body))
 	eTime := time.Now().UnixNano()/1e6
 	use_time := (eTime - sTime)
 	time_list = append(time_list, int(use_time))
-	fmt.Println(string(body))
-	if strings.Contains(string(body), "0") {
+	if strings.Contains(string(body), "success") {
 		ok_num += 1
 	}
 	return string(body)
