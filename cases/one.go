@@ -87,16 +87,16 @@ func httpSend() string {
 	//计数器减一
 	defer wg.Done()
 	var request Request
-	request.url = "http://web.1v1xqt.com:27777/api/v1/RewardRank"
+	request.url = "http://api/v1/"
 	data := make(map[string]interface{})
-	//request.data["TypeId"] = 89
-	//request.data["AgentId"] = 14926056
+	//request.data["TypeId"] = 
+	//request.data["AgentId"] = 
 	params := make(map[string]interface{})
-	params["UserId"] = 677779701
+	params["UserId"] = 
 	params["ts"] = SetTs()
-	params["Key"] = Md5ToString("w1234567")
+	params["Key"] = Md5ToString("")
 	sign := strings.ToUpper(Md5ToString(SortData(params)))
-	data["UserId"] = 677779701
+	data["UserId"] = 
 	data["ts"] = SetTs()
 	data["sign"] = sign
 	sTime := time.Now().UnixNano()/1e6
