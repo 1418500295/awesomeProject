@@ -4,6 +4,23 @@ import (
 
 	"fmt"
 )
+//初始化操作
+func setup()  {
+	fmt.Println(1)
+	
+}
+func teardown()  {
+	fmt.Println(2)
+
+}
+func TestMain(m *testing.M) {
+	setup()
+	m.Run()
+	teardown()
+	os.Exit(0)
+
+	
+}
 
 type Books struct {
 	title string
