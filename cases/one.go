@@ -74,6 +74,20 @@ func main() {
 	for _,i := range time_list {
 		sum = sum + i
 	}
+	max := common.Time_list[0]
+	for _,i := range common.Time_list {
+		if i > max {
+			max = i
+		}
+	}
+	min := common.Time_list[0]
+	for _,i := range common.Time_list {
+		if i < min {
+			min = i
+		}
+	}
+	fmt.Printf("最大响应时间：%.2f 秒 \n",float64(max)/1000)
+	fmt.Printf("最小响应时间：%.2f 秒 \n",float64(min)/1000)
 	fmt.Printf("平均响应时间是:%.2f 秒 \n",float64(sum)/float64(num)/1000)
 	fmt.Printf("QPS：%.2f",float64(num)/(float64(sum)/float64(num)/1000))
 
