@@ -69,7 +69,7 @@ func main() {
 	fmt.Printf("结束时间：%v \n", end_time)
 	fmt.Println("成功的数量：", ok_num)
 	fmt.Printf("失败的数量：%v \n", num-ok_num)
-	fmt.Printf("总耗时：%.2f 秒 \n", float64(end_time - start_time)/1e9)
+	fmt.Printf("总耗时：%.3f 秒 \n", float64(end_time - start_time)/1e9)
 	sum := 0
 	for _,i := range time_list {
 		sum = sum + i
@@ -86,10 +86,10 @@ func main() {
 			min = i
 		}
 	}
-	fmt.Printf("最大响应时间：%.2f 秒 \n",float64(max)/1000)
-	fmt.Printf("最小响应时间：%.2f 秒 \n",float64(min)/1000)
-	fmt.Printf("平均响应时间是:%.2f 秒 \n",float64(sum)/float64(num)/1000)
-	fmt.Printf("QPS：%.2f",float64(num)/(float64(sum)/float64(num)/1000))
+	fmt.Printf("最大响应时间：%.3f 秒 \n",float64(max)/1000)
+	fmt.Printf("最小响应时间：%.3f 秒 \n",float64(min)/1000)
+	fmt.Printf("平均响应时间是:%.3f 秒 \n",float64(sum)/float64(num)/1000)
+	fmt.Printf("QPS：%.3f",float64(num)/(float64(sum)/float64(num)/1000))
 
 }
 
