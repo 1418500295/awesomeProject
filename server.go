@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+//服务端代码
 func echoHandler(ws *websocket.Conn) {
 
 	msg := make([]byte, 512)
