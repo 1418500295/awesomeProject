@@ -4,49 +4,35 @@ import (
 	"fmt"
 	"golang.org/x/net/websocket"
 	"log"
-	"sync"
+	"net/http"
 )
 
-var origin = "http://127.0.0.1:8080/"
-var url = "ws://127.0.0.1:8080/echo"
-var wg = sync.WaitGroup{}
+func echoHandler(ws *websocket.Conn) {
 
-func run()  {
-	wg.Add(10)
-	for i:= 0; i< 10 ;i++ {
-		go Req()
-	}
-	wg.Wait()
-
-}
-func main() {
-	run()
-}
-
-func Req() {
-	defer wg.Done()
-	ws, err := websocket.Dial(url, "", origin)
+	msg := make([]byte, 512)
+	n, err := ws.Read(msg)
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Printf("Receive: %s\n", msg[:n])
 
-	message := []byte("hello, world!你好")
-	_, err = ws.Write(message)
+	send_msg := "[" + string(msg[:n]) + "]"
+	m, err := ws.Write([]byte(send_msg))
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal(err)
 	}
-	fmt.Printf("Send: %s\n", message)
+	fmt.Printf("Send: %s\n", msg[:m])
 
-	var msg = make([]byte, 512)
-	m, err := ws.Read(msg)
+
+}
+
+func main() {
+	http.Handle("/echo", websocket.Handler(echoHandler))
+	http.Handle("/", http.FileServer(http.Dir(".")))
+
+	err := http.ListenAndServe(":8080", nil)
+
 	if err != nil {
-		fmt.Println(err)
+		panic("ListenAndServe: " + err.Error())
 	}
-	fmt.Printf("Receive: %s\n", msg[:m])
-
-
-
-
-	ws.Close() //关闭连接
-
 }
