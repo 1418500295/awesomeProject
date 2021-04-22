@@ -71,7 +71,7 @@ func GetUrl(urlName string) string {
 	configStr := strings.Split(string(bytesStr),"\n")
 	var endUrl string
 	for _,i := range configStr {
-		iSlice := strings.Split(i,"=")
+		iSlice := strings.Split(strings.ReplaceAll(i,"\r",""),"=")
 		if urlName == strings.Trim(iSlice[0]," "){
 			url := strings.Trim(iSlice[1]," ")
 			if !strings.HasPrefix(url,"/") {
