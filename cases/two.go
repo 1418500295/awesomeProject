@@ -22,6 +22,13 @@ func main() {
 	//解密
 	d, _ := base64.StdEncoding.DecodeString(a)
 	fmt.Println(string(d))
+	
+	
+	
+	//生成随机数
+	fmt.Println(rand.Intn(100))
+	//生成指定范围随机数(10到110之间的数)
+	fmt.Println(rand.Intn(100)+10)
 
 
 
