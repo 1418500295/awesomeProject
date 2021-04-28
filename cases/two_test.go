@@ -12,5 +12,11 @@ func Test_01(t *testing.T) {
 }
 
 
+//age 为可选参数，可传可不传
+func One(name string,age ...interface{})  {
+	fmt.Println(name,age)
+}
+
+
 
 
